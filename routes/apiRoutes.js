@@ -1,14 +1,12 @@
 var db = require("../models");
 
 module.exports = function(app) {
-
-  // Get all users
-  app.get("/api/users", function (req, res) {
-    Users.findAll({}).then(allUsers => res.json(allUsers))
+  app.get("/api/users", function(req, res) {
+    db.Users.findAll({}).then(allUsers => res.json(allUsers));
   });
 
   // Create a new user
-  app.post("/api/newuser", function (req, res) {
+  app.post("/api/newuser", function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
     var name = req.body.name;
@@ -23,12 +21,14 @@ module.exports = function(app) {
       gender: gender,
       age: age,
       location: location
-    }).then(newUser => res.json(newUser))
+    }).then(newUser => res.json(newUser));
   });
 
   // Delete a user by id
-  app.delete("/api/deleteuser/:id", function (req, res) {
+  app.delete("/api/deleteuser/:id", function(req, res) {
     var userID = req.params.id;
-    db.Users.destroy({where: {id: userID}}).then(deletedUser => res.json(deletedUser))
-  })
+    db.Users.destroy({ where: { id: userID } }).then(deletedUser =>
+      res.json(deletedUser)
+    );
+  });
 };

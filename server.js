@@ -34,14 +34,14 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Check connection to the database
-db.sequelize
-  .authenticate()
-  .then(function(err) {
-    console.log('Connection has been established successfully.');
-  }, function (err) {
-    console.log('Unable to connect to the database:', err);
-  });
-
+db.sequelize.authenticate().then(
+  function(err) {
+    console.log("Connection has been established successfully.");
+  },
+  function(err) {
+    console.log("Unable to connect to the database:", err);
+  }
+);
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
