@@ -1,3 +1,22 @@
 .list-group-item {
   line-height: 2.5;
 }
+
+#intro-modal {
+  min-height: 10em;
+  display: table-cell;
+  vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position:relative;
+  background-color: rgb(235, 235, 235); 
+  height: 30vh;
+}
+
+.modal-title {
+  text-align: center; 
+  font-size: 15px;
+}
+
+
