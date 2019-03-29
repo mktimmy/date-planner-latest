@@ -2,21 +2,28 @@
   line-height: 2.5;
 }
 
+body {
+  background-color: #FFF9E3
+}
+
 #intro-modal {
-  min-height: 10em;
-  display: table-cell;
-  vertical-align: middle;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position:relative;
   background-color: rgb(235, 235, 235); 
   height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
 }
 
 .modal-title {
   text-align: center; 
   font-size: 15px;
 }
-
+#intro-container {
+  background-image: url(../../images/intro-img-png);
+  background-color: #fff;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
 
