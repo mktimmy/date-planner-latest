@@ -77,7 +77,7 @@ module.exports = function (app) {
     var hash = bcrypt.hashSync(newpassword, 10);
     newpassword = hash;
 
-    if()
+
     
   })
 
