@@ -6,13 +6,21 @@ body {
   background-color: #FFF9E3
 }
 
+#navbar-main {
+  height: 75px;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
 #intro-modal {
-  background-color: rgb(235, 235, 235); 
+  background-color: white;
   height: 30vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin:0 auto;
+  z-index: 10;
 }
 
 .modal-title {
@@ -20,10 +28,14 @@ body {
   font-size: 15px;
 }
 #intro-container {
-  background-image: url(../../images/intro-img-png);
+  width: 100%;
+  background: url(../assets/images/intro-bkg-img.png) 50% 0 no-repeat fixed;
+  background-size:cover;
+  /* background-image: ; */
   background-color: #fff;
   height: 90vh;
   display: grid;
   place-items: center;
+  z-index: 0;
 }
 
