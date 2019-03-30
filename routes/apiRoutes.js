@@ -70,6 +70,17 @@ module.exports = function (app) {
       })
   })
 
+  // UPDATE USER PASSWORD
+  app.post("/api/updatepassword", function (req, res) {
+    var oldpassword = req.body.oldpassword;
+    var newpassword = req.body.newpassword;
+    var hash = bcrypt.hashSync(newpassword, 10);
+    newpassword = hash;
+
+
+    
+  })
+
   // Delete a user by id
   app.delete("/api/deleteuser/:id", function (req, res) {
     var userID = req.params.id;
