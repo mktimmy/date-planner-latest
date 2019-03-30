@@ -1,9 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
-
 var db = require("./models");
-
 var app = express();
 var PORT = process.env.PORT || 3000;
 
@@ -11,6 +9,8 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+// app.use(bodyParser.urlencoded({ extended: false }));
+
 
 // Handlebars
 app.engine(
@@ -32,6 +32,16 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
+
+// Check connection to the database
+db.sequelize
+  .authenticate()
+  .then(function(err) {
+    console.log('Connection has been established successfully.');
+  }, function (err) {
+    console.log('Unable to connect to the database:', err);
+  });
+
 
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function () {

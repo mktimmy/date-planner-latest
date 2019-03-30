@@ -1,0 +1,55 @@
+<div id="user" style="width:100%;">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">Example</h5>
+            <p>
+              <strong>ID</strong>: {{example.id}}</p>
+            <p>
+              <p>
+                <strong>User Name: <br>
+                  {{example.text}}</p>
+              </strong>
+              <p>
+                <strong>Description:</strong> {{example.description}}</p>
+              <a href="/">← Back To Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12"></div>
+    <div class="container-fluid" id="intro-container">
+      <section id="intro-modal" class="col s6">
+        <div class="modal-body">
+          <div class="modalTitle">
+            <p>
+              <strong>User Name: <br>
+            <p>
+            <h2 style="text-align: left; font-size:28px;">
+              {{example.text}}</p>
+              </strong>
+            </h2>
+          </div>
+          <h3 style="text-align: Left; font-size: 20px;">This is our site! Welcome, broswe and see whats happening
+          </h3>
+          <form class="clearfix mb-4" action="POST">
+            <div class="form-group">
+              <label for="location input" style="font-size:20px;">Where?</label>
+              <input type="text" id="user-location" class="form-control" aria-describedby="location-input"
+                placeholder="90% of a Relationship Is Figuring Out Where to Eat" style="width: 460px;">
+            </div>
+
+            <button id="submit" type="submit" class="btn btn-primary float-right">Submit</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="container">
