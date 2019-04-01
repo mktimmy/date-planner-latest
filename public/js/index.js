@@ -97,3 +97,11 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+
+var cardContainer = $("<div class='container'></div>");
+var cardDiv = $("<div id='card-div' class='col s3' style='margin:30px;'></div>");
+var card = $("<div class='card' style='width: auto;' data-id={{this.id}}></div>");
+var cardContainer = $("<ul id='results-list' class='list-group-results'></ul>");
+var cardContainer = $("<div class='container'></div>");
