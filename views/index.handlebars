@@ -1,5 +1,5 @@
 <div id="home" style="width:100%;">
- 
+
   <div class="row">
     <div class="col s12"></div>
     <div class="container-fluid" id="intro-container">
@@ -18,14 +18,183 @@
               <input type="text" id="user-location" class="form-control" aria-describedby="location-input"
                 placeholder="90% of a Relationship Is Figuring Out Where to Eat" style="width: 460px;">
             </div>
-
             <button id="submit" type="submit" class="btn btn-primary float-right">Submit</button>
           </form>
         </div>
       </section>
     </div>
   </div>
-  <div class="container">
+
+  <div class="row">
+    <div class="container">
+      <div id="return-desc-title" class="col-12">
+        <div class="col3" height="60px">
+          <h2 class="return-title" style="text-align:center;">
+            Hello World
+            <a href="example/{{this.id}}">{{this.city}}</a>
+          </h2>
+        </div>
+        <h4 style="text-align:center;"> "Joke From City Would be super funny."
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card-div" class="col s3" style="margin:30px;width:350px;">
+        <div class="card" style="width: 330px;" data-id={{this.id}}>
+          <div class="card-image" style="margin:0 auto; width:328px; height:210px;">
+            <img src="../assets/images/everglades-adventure-boat-tour-in-miami-combo--4be0edd@1300.jpg"
+              style="margin:0 auto; width:328px; height:210px;" alt="{{this.imageNmae}}">
+          </div>
+          <div class="card-body">
+            <span>
+              <h5 class="card-title" id="card-title" style="font-size:25px;font-family: 'Signika', sans-serif;">
+                <strong>
+                  Everglades wonder tour!
+                </strong>
+              </h5>
+            </span>
+            <span class="card-text" id="card-location" style="font-size:16px;font-family: 'Signika', sans-serif;">
+              Ever wanted to be friends with a gator?!<br>
+              Come check out the...
+              <a href="#" target="blank">
+                Read More
+              </a>
+            </span>
+            <br>
+            <br>
+            <span class="card-text" id="card-address"
+              style="font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
+              12459 S Dixie Highway
+              <br>
+              Opa Locka, FL 33401
+            </span>
+            <span class="card-text" id="card-price"
+              style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
+              $12/person
+            </span>
+            <br>
+            <a href="#" class="btn btn-primary" style="font-size:15px;" data-id="1">&hearts;</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-div" class="col s3" style="margin:30px;">
+        <div class="card" style="width: 330px;" data-id={{this.id}}>
+          <span class="card-image" style="margin:0 auto; width:328px; height:210px;">
+            <img src="../assets/images/Helicopter_Tour_Miam2-1600x960-1600x960.jpg"
+              style="margin:0 auto; width:328px; height:210px;" alt="{{this.imageNmae}}">
+          </span>
+          <div class="card-body">
+            <span>
+              <h5 class="card-title" id="card-title" style="font-size:25px;font-family: 'Signika', sans-serif;"><strong>
+                  Miami Helicopter Tour
+                </strong>
+              </h5>
+            </span>
+            <span class="card-text" id="card-location" style="font-size:16px;font-family: 'Signika', sans-serif;">
+              An Incredible tour of the city for 2!
+              <br>
+              Come discover what you...
+              <a href="#" target="blank">
+                Read More
+              </a>
+            </span>
+            <br>
+            <br>
+            <span class="card-text" id="card-address"
+              style="font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
+              1234 Collins Avenue,
+              <br>
+              Miami Beach, FL 33132
+            </span>
+            <span class="card-text" id="card-price"
+              style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
+              $95/person
+            </span>
+            <br>
+            <a href="#" class="btn btn-primary" style="font-size:15px;" data-id="1">&hearts;</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-div" class="col s3" style="margin:30px;">
+        <div class="card" style="width: 330px;" data-id={{this.id}}>
+          <div class="card-image" style="margin:0 auto; width:328px; height:210px;">
+            <img src="../assets/images/doral_burger.jpg" style="margin:0 auto; width:328px; height:210px;"
+              alt="{{this.imageNmae}}">
+          </div>
+          <div class="card-body">
+            <span>
+              <h5 class="card-title" id="card-title">
+                <strong>
+                  BOCAS Grill
+                </strong>
+              </h5>
+            </span>
+            <span class="card-text" id="card-location" style="font-size:16px;font-family: 'Signika', sans-serif;">
+              Black Burger Buns?! Order Up!
+              <br>
+              These tastey burgers...
+              <a href="#" target="blank">
+                Read More
+              </a>
+            </span>
+            <br>
+            <br>
+            <span class="card-text" id="card-address"
+              style="font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
+              8762 S Miami Ave. <br> Doral, FL 33178
+            </span>
+            <span class="card-text" id="card-price"
+              style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
+              $18/person
+            </span>
+            <br>
+            <a href="#" class="btn btn-primary" style="font-size:15px;" data-id="1">&hearts;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row"></div>
+</div>
+{{!-- <div class="row">
+      <div class="col-12">
+        <div width="50vh" class="return-cards">
+          <div class="card-div" class="col">
+            <ul id="results-list" class="list-group-results">
+              {{!-- {{#each resultCard}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}} --}}
+
+
+{{!-- <h5></h5>
+</ul>
+</div>
+</div>
+</div>
+</div> --}}
+{{!-- </div>
+</div> --}}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+{{!-- 
+<div class="row">
+  <div class="col s12"></div>
+  <div class="container-fluid" 2e="background-color: orange; height: 300px;">
+    <section id="how-to-div" class="col s12" style="background-color: rgb(235, 235, 235); height: 30vh;">
+      <div id="how-to-div-1" class="col s4">
+        <h2 style="font-size:18px;">
+          Save the Date
+        </h2>
+        <div class="s2">
+          <h2> Hello </h2>
+        </div>
 
     <div class="row">
       <div class="col-8 offset-2">
@@ -45,7 +214,7 @@
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
         <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
+        <ul id="-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.text}}</a>
@@ -54,31 +223,19 @@
           {{/each}}
         </ul>
       </div>
-
-
     </div>
   </div>
 </div>
-
-
-{{!-- 
-<div class="row">
-  <div class="col s12"></div>
-  <div class="container-fluid" 2e="background-color: orange; height: 300px;">
-    <section id="how-to-div" class="col s12" style="background-color: rgb(235, 235, 235); height: 30vh;">
-      <div id="how-to-div-1" class="col s4">
-        <h2 style="font-size:18px;">
-          Save the Date
-        </h2>
-        <div class="s2">
-          <h2> Hello </h2>
-
-        </div>
-
-
-
         <h3 style="font-size:15px;">This is our site! Welcome, broswe and see whats happening</h3>
       </div>
+
+      
+
+
+
+
+
+
       <div id="how-to-div-2" class="col s4">
         <h2 style="font-size:18px;">
           Save the Date
@@ -96,6 +253,3 @@
     </section>
   </div>
 </div> --}}
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
