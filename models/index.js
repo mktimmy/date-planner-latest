@@ -9,7 +9,7 @@ var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 var cors = require("cors");
 var bodyParser = require("body-parser");
-var jwt = require("jsonwebtoken");
+var j = require("jsonwebtoken");
 var bcrypt = require("bcrypt");
 
 if (config.use_env_variable) {

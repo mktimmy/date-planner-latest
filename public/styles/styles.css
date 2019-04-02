@@ -13,20 +13,6 @@ body {
   z-index: 99;
 }
 
-#intro-modal {
-  background-color: white;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin:0 auto;
-  z-index: 10;
-}
-
-.modal-title {
-  text-align: center; 
-  font-size: 15px;
-}
 #intro-container {
   width: 100%;
   background: url(../assets/images/intro-bkg-img.png) 50% 0 no-repeat fixed;
@@ -39,3 +25,32 @@ body {
   z-index: 0;
 }
 
+#intro-modal {
+  background: linear-gradient( rgba(255,204,128,.9) 0%, rgba(255,249,227,.9) 40%);
+  color: #fff9e3;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+  z-index: 10;
+  border-radius: 20px;
+  box-shadow: 5px 10px 8px  #fff9e3;
+
+}
+
+.modal-title {
+  text-align: center; 
+  font-size: 15px;
+}
+
+#like-button {
+background: #ff7f4f;
+color: #fff9e3;
+
+}
+
+.return-title {
+  color: #ff7f4f;
+
+}

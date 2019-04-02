@@ -16,22 +16,23 @@ module.exports = function(app) {
 
   });
 
-  app.get("/user/", function(req, res) {
-    db.users.findOne({ where: { id: req.params.id } }).then(function(
-      users
-    ) {
-      res.render("example", {
-        username: username
+  app.get("/users/", function(req, res) {
+    db.project2.findAll({
+      attributes: ['username', 'name']
+    }).then(function(project2) {
+      res.render("users", {
+        username: username,
+        name: name
       });
     });
   });
 
   // Load example page and pass in an example by id
-  app.get("/user/", function(req, res) {
-    db.users.findOne({ where: { id: req.params.id } }).then(function(
-      users
-    ) {
-      res.render("example", {
+  app.get("/users/:id", function(req, res) {
+    db.Users.findOne({
+      attributes: ['username', 'location', 'name']
+    }).then(function(Users) {
+      res.render("users", {
         username: username
       });
     });
