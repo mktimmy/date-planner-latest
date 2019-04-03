@@ -80,7 +80,10 @@ module.exports = function (app) {
 
   // UPDATE USER LOCATION
   app.post("/api/updatelocation", function (req, res) {
-
+    var newLocation = req.body.newLocation;
+    db.Users.update({location: {newLocation}}, {where: {username: req.body.username}}).then(updatedLocation => {
+      res.send(updatedLocation)
+    })
   })
   // DISCOUNT API CALL
   app.get("/api/discountcall/:location/", (req, res) => {
