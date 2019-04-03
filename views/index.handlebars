@@ -195,6 +195,14 @@
 <script src="/js/index.js"></script>
 <script src="/js/apicalls.js"></script>
 
+<script>
+  $("#submit-button").click(function(){
+  $.ajax({url: "`/api/discountcall/${location}`", success: function(result){
+    $("#div1").html(result);
+  }});
+});
+</script>
+
 {{!-- 
 <div class="row">
   <div class="col s12"></div>
