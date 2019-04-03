@@ -1,10 +1,7 @@
 var db = require("../models");
 var bodyParser = require("body-parser");
 var cors = require("cors");
-var jwt = require("jsonwebtoken");
 var bcrypt = require("bcrypt");
-
-process.env.SECRET_KEY = "secret"
 
 
 module.exports = function (app) {
@@ -35,10 +32,7 @@ module.exports = function (app) {
         var hash = bcrypt.hashSync(createUser.password, 10)
         createUser.password = hash
         db.Users.create(createUser).then(newUser => {
-          let token = jwt.sign(newUser.dataValues, process.env.SECRET_KEY, {
-            expiresIn: 1440
-          })
-          res.json({ token: token })
+          res.send(newUser.dataValues)
         })
       } else {
         res.json({ error: 'Username already exists.' })
@@ -58,27 +52,39 @@ module.exports = function (app) {
       }
     }).then(user => {
       if (bcrypt.compareSync(req.body.password, user.password)) {
-        let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
-          expiresIn: 1440
-        })
-        res.json({token: token})
+        res.send(user.dataValues)
       } else {
         res.send("User does not exist.")
       }
-  }).catch(err => {
-        res.send('error: ' + err)
-      })
+    }).catch(err => {
+      res.send('error: ' + err)
+    })
   })
 
   // UPDATE USER PASSWORD
   app.post("/api/updatepassword", function (req, res) {
-    var oldpassword = req.body.oldpassword;
+
+    var currentPassword = req.body.currentpassword
     var newpassword = req.body.newpassword;
     var hash = bcrypt.hashSync(newpassword, 10);
     newpassword = hash;
+    var username = req.body.username;
+
+    db.Users.findOne({ where: { username: req.body.username } }).then(currentUser => {
+      if (bcrypt.compareSync(currentPassword, currentUser.password)) {
+        db.Users.update({ password: newpassword }, { where: { username: currentUser.username } }).then()
+      }
+    })
+  });
+
+  // UPDATE USER LOCATION
+  app.post("/api/updatelocation", function (req, res) {
+    // grab new user location
+    var newLocation = req.body.newlocation;
+    // delete current user location
 
 
-    
+    // 
   })
 
   // Delete a user by id
