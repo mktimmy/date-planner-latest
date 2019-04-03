@@ -16,25 +16,19 @@ module.exports = function(app) {
 
   });
 
-  app.get("/users/", function(req, res) {
-    db.project2.findAll({
-      attributes: ['username', 'name']
-    }).then(function(project2) {
-      res.render("users", {
-        username: username,
-        name: name
-      });
+  app.get("/users/", function (req, res) {
+    db.Users.findAll().then(function(allUsers) {
+      // res.json(allUsers);
+      res.render("users");
     });
   });
 
   // Load example page and pass in an example by id
   app.get("/users/:id", function(req, res) {
-    db.Users.findOne({
-      attributes: ['username', 'location', 'name']
-    }).then(function(Users) {
-      res.render("users", {
-        username: username
-      });
+    var userID = req.params.id;
+    db.Users.findOne({where: {id: userID }}).then(function(Users) {
+      // res.json(Users);
+      res.render("users");
     });
   });
 

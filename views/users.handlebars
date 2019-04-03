@@ -6,19 +6,81 @@
       <div class="col-8 offset-2">
         <div class="card mt-4">
           <div class="card-body">
-            <h5 class="card-title">Example</h5>
-            <p>
-              <strong>ID</strong>: {{example.id}}</p>
-            <p>
+            <div class="card-title">
+              <h5>User Profile</h5>
+            </div>
+            <div class="username col-12">
+              <li data="{{Users.username}}" class="list-group-item">
+                Username:<br>
+                <button class="btn-large disabled" style="width:90%" placeholder="{{username}}">
+                  <a href="#">{{username}}</a>
+                </button>
+                {{!-- {{#each Users}}
+                {{/each}} --}}
+              </li>
+            </div>
+            <div class="password col-12">
+              <li data="{{Users.username}}" class="list-group-item">
+                Password:<br>
+                <button class="btn-large disabled" style="width:90%" placeholder="{{password}}">
+                  <a href="#"></a>
+                </button>
+              </li> 
+              </div>
+            <div class="name col-12">
+              <li data="{{Users.name}}" class="list-group-item">
+                Name:<br>
+                <button class="btn-large disabled" style="width:90%" placeholder="{{name}}">
+                  <a href="#">{{name}}</a>
+                </button>
+              </li>  
+              </div>
+            <div class="gender col-12">
+                 <li data="{{Users.gender}}" class="list-group-item">
+                Gender:<br>
+                <button class="btn-large disabled" style="width:90%" placeholder="{{gender}}">
+                  <a href="#">{{gender}}</a>
+                </button>
+              </li>  
+               </div>
+            {{!-- <li data="{{Users.username}}" class="list-group-item">
+              Username:<br>
+              <a href="#">{{Users.username}}</a>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+
               <p>
-                <strong>User Name: <br>
-                  {{example.text}}</p>
+                {{#each Users}}
+
+            </li> --}}
+            {{!-- <p>
+              <p>
+                <strong>Name: <br>
+                  {{name}}</p>
               </strong>
               <p>
-                <strong>Description:</strong> {{example.description}}</p>
-              <a href="/">← Back To Home</a>
+                <strong>PassWord: <br>
+                  {{password}}</p>
+              </strong>
+              <p>
+                <strong>PassWord: <br>
+                  {{password}}
+              </strong>
+              </p>
+              <strong>Location:</strong> <br> {{this.Users.location}}
+            </p> --}}
+
+
           </div>
+          <div class="back-to-home"> <button> <a href="/">← Back To Home</a></button></div>
+
         </div>
+
+        {{!-- {{#each examples}}
+        <li data-id="{{this.id}}" class="list-group-item">
+          <a href="example/{{this.id}}">{{this.text}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}} --}}
       </div>
     </div>
   </div>
