@@ -25,6 +25,7 @@ body {
   z-index: 0;
 }
 
+
 #intro-modal {
   background: linear-gradient( rgba(255,204,128,.9) 0%, rgba(255,249,227,.9) 40%);
   color: #fff9e3;
@@ -42,6 +43,18 @@ body {
 .modal-title {
   text-align: center; 
   font-size: 15px;
+}
+
+#user-container {
+  width: 100%;
+  background: url(../assets/images/intro-bkg-img.png) 50% 0 no-repeat fixed;
+  background-size:cover;
+  /* background-image: ; */
+  background-color: #fff;
+  height: 30vh;
+  display: grid;
+  place-items: center;
+  z-index: 0;
 }
 
 #like-button {
