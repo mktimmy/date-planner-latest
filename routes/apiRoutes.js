@@ -2,6 +2,7 @@ var db = require("../models");
 var bodyParser = require("body-parser");
 var cors = require("cors");
 var bcrypt = require("bcrypt");
+var request = require("request");
 
 
 module.exports = function (app) {
@@ -79,13 +80,33 @@ module.exports = function (app) {
 
   // UPDATE USER LOCATION
   app.post("/api/updatelocation", function (req, res) {
-    // grab new user location
-    var newLocation = req.body.newlocation;
-    // delete current user location
 
-
-    // 
   })
+  // DISCOUNT API CALL
+  app.get("/api/discountcall/:location/", (req, res) => {
+    var location = req.params.location
+    var options = {
+      method: 'GET',
+      url: 'https://api.discountapi.com/v2/deals',
+      qs: { aumtHLbj: '' },
+      headers:
+      {
+        'Postman-Token': 'b69a018b-d5d1-45c7-b64c-015bce77f964',
+        'cache-control': 'no-cache',
+        'Content-Type': 'application/json',
+        'location': location
+      }
+    };
+
+    request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+      res.send(body)
+    })
+  })
+
+
+  // EVENTBRITE API CALL
+
 
   // Delete a user by id
   app.delete("/api/deleteuser/:id", function (req, res) {
