@@ -75,15 +75,12 @@ module.exports = function (app) {
       if (bcrypt.compareSync(currentPassword, currentUser.password)) {
         db.Users.update({ password: newpassword }, { where: { username: currentUser.username } }).then()
       }
-    })
+    }):
   });
 
   // UPDATE USER LOCATION
   app.post("/api/updatelocation", function (req, res) {
-    var newLocation = req.body.newLocation;
-    db.Users.update({location: {newLocation}}, {where: {username: req.body.username}}).then(updatedLocation => {
-      res.send(updatedLocation)
-    })
+
   })
   // DISCOUNT API CALL
   app.get("/api/discountcall/:location/", (req, res) => {
@@ -109,7 +106,25 @@ module.exports = function (app) {
 
 
   // EVENTBRITE API CALL
+  app.get("/api/eventbritecall/:location", (req, res) => {
+    var location = req.params.location;
 
+    var options = {
+      method: 'GET',
+      url: 'https://www.eventbriteapi.com/v3/events/search',
+      qs: { token: 'JWFTSNNP5W6H4IMYUNR2', 'location.address': `${location}` },
+      headers:
+      {
+        'Postman-Token': '0714d847-7fc2-4f0c-aafb-77e5238cfd1e',
+        'cache-control': 'no-cache',
+        'Content-Type': 'application/json'
+      }
+    };
+
+    request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+      res.send(body)
+  })
 
   // Delete a user by id
   app.delete("/api/deleteuser/:id", function (req, res) {
