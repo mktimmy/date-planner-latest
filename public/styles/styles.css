@@ -67,3 +67,22 @@ color: #fff9e3;
   color: #ff7f4f;
 
 }
+
+#card-location {
+   
+    display: block;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+}
+
+#cards-container {
+
+}
+.card-div {
+  margin:30px;
+  width:auto;
+  float:left;
+}

@@ -39,7 +39,7 @@
             <div class="card-title">
               <h5>User Profile</h5>
             </div>
-            <div class="username col-12">
+            <div class="username col-12" style="margin:20px;">
               <li data="{{Users.username}}" class="list-group-item">
                 Username:<br>
                 <button class="btn-large disabled" style="width:90%" placeholder="{{username}}">
@@ -49,30 +49,36 @@
                 {{/each}} --}}
               </li>
             </div>
-            <div class="password col-12">
+            <div class="password col-12" style="margin:20px;">
               <li data="{{Users.username}}" class="list-group-item">
                 Password:<br>
                 <button class="btn-large disabled" style="width:90%" placeholder="{{password}}">
                   <a href="#"></a>
                 </button>
-              </li> 
-              </div>
-            <div class="name col-12">
+              </li>
+            </div>
+            <div class="name col-12" style="margin:20px;">
               <li data="{{Users.name}}" class="list-group-item">
                 Name:<br>
                 <button class="btn-large disabled" style="width:90%" placeholder="{{name}}">
                   <a href="#">{{name}}</a>
                 </button>
-              </li>  
-              </div>
-            <div class="gender col-12">
-                 <li data="{{Users.gender}}" class="list-group-item">
+              </li>
+            </div>
+            <div class="gender col-12" style="margin:20px;">
+              <li data="{{Users.gender}}" class="list-group-item">
                 Gender:<br>
-                <button class="btn-large disabled" style="width:90%" placeholder="{{gender}}">
-                  <a href="#">{{gender}}</a>
-                </button>
-              </li>  
-               </div>
+                <input class="btn-large disabled" style="width:90%" placeholder="{{gender}}">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input Gender: value="Male" class="disabled" id="disabled" type="text" class="validate">
+                <label for="disabled">Gender:</label>
+              </div>
+            </div>
             {{!-- <li data="{{Users.username}}" class="list-group-item">
               Username:<br>
               <a href="#">{{Users.username}}</a>
@@ -101,8 +107,8 @@
 
 
           </div>
-          <div class="back-to-home"> <button> <a href="/">← Back To Home</a></button></div>
-
+          <div class="back-to-home"> <button class="waves-effect waves-light btn #ff6f00 amber darken-4;"
+              style="margin:20px;"> <a style="color:white;" href="/">← Back To Home</a></button></div>
         </div>
 
         {{!-- {{#each examples}}
@@ -114,4 +120,3 @@
       </div>
     </div>
   </div>
-

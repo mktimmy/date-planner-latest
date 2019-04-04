@@ -12,8 +12,7 @@ module.exports = function(app) {
   });
 
   app.get("/browse/categories/:categoriename", function (req, res) {
-    var categoriename = req.params.categoriename
-
+    var categoriename = req.params.categoriename;
   });
 
   app.get("/users/", function (req, res) {

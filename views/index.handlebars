@@ -9,19 +9,21 @@
             <h2 style="text-align: center; font-size:35px;color:#686868; font-family: 'Yesteryear', cursive;">
               Save the Date
             </h2>
-             <h3 style="margin:0 auto;text-align: center; font-size: 20px;color:#686868;">
-               We know dating is difficult. Cut out the middle man, and go direct to the source <br>
-                <br><strong style="z-index:0;color:#ff8f0f;font-size:60px;font-family: 'Yesteryear', cursive;">you!</strong> <br>
-          </h3>
+            <h3 style="margin:0 auto;text-align: center; font-size: 20px;color:#686868;">
+              We know dating is difficult. Cut out the middle man, and go direct to the source <br>
+              <br><strong
+                style="z-index:0;color:#ff8f0f;font-size:60px;font-family: 'Yesteryear', cursive;">you!</strong> <br>
+            </h3>
           </div>
           <br>
           <form class="clearfix mb-4">
             <div class="form-group">
               <label for="location input" style="font-size:20px;color:#ff7f4f;">Where?</label>
               <input type="text" id="user-location" class="form-control" aria-describedby="location-input"
-                placeholder="90% of a Relationship Is Figuring Out Where to Eat" style="color:#ff8f0f; font-size:20px;width: 460px;">
+                placeholder="90% of a Relationship Is Figuring Out Where to Eat"
+                style="color:#ff8f0f; font-size:20px;width: 460px;">
             </div>
-            <button id="submit-button"  class="btn btn-primary float-right">Submit</button>
+            <button id="submit-button" class="btn btn-primary float-right">Submit</button>
           </form>
         </div>
       </section>
@@ -36,6 +38,7 @@
       </div>
     </div>
   </div>
+
   <div class="row">
     <div class="container">
       <div id="return-desc-title" class="col-12">
@@ -49,7 +52,9 @@
         </h4>
       </div>
     </div>
+  </div>
     <div class="row">
+      <div id="cards-container">
       <div class="card-div" class="col s3" style="margin:30px;width:350px;">
         <div class="card" style="width: 330px;" data-id={{this.id}}>
           <div class="card-image" style="margin:0 auto; width:328px; height:210px;">
@@ -57,34 +62,44 @@
               style="margin:0 auto; width:328px; height:210px;" alt="{{this.imageNmae}}">
           </div>
           <div class="card-body">
-            <span>
-              <h5 class="card-title" id="card-title" style="font-size:25px;font-family: 'Signika', sans-serif;">
-                <strong>
-                  Everglades wonder tour!
-                </strong>
-              </h5>
-            </span>
-            <span class="card-text" id="card-location" style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
-              Ever wanted to be friends with a gator?!<br>
-              Come check out the...
-              <a href="#" target="blank">
-                Read More
-              </a>
-            </span>
-            <br>
-            <br>
-            <span class="card-text" id="card-address"
-              style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
-              12459 S Dixie Highway
+            <h3>Examples:</h3>
+            <ul id="example-list" class="list-group">
+              {{#each examples}}
+              <li data-id="{{this.id}}" class="list-group-item">
+                <a href="example/{{this.id}}">{{this.text}}</a>
+                <button class="btn btn-danger float-right delete">ｘ</button>
+              </li>
+              {{/each}}
+              <span>
+                <h5 class="card-title" id="card-title" style="font-size:25px;font-family: 'Signika', sans-serif;">
+                  <strong>
+                    Everglades wonder tour!
+                  </strong>
+                </h5>
+              </span>
+              <span class="card-text" id="card-location"
+                style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
+                Ever wanted to be friends with a gator?!<br>
+                Come check out the...
+                <a href="#" target="blank">
+                  Read More
+                </a>
+              </span>
               <br>
-              Opa Locka, FL 33401
-            </span>
-            <span class="card-text" id="card-price"
-              style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
-              $12/person
-            </span>
-            <br>
-            <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;" data-id="1">&hearts;</a>
+              <br>
+              <span class="card-text" id="card-address"
+                style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
+                12459 S Dixie Highway
+                <br>
+                Opa Locka, FL 33401
+              </span>
+              <span class="card-text" id="card-price"
+                style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
+                $12/person
+              </span>
+              <br>
+              <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;"
+                data-id="1">&hearts;</a>
           </div>
         </div>
       </div>
@@ -101,7 +116,8 @@
                 </strong>
               </h5>
             </span>
-            <span class="card-text" id="card-location" style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
+            <span class="card-text" id="card-location"
+              style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
               An Incredible tour of the city for 2!
               <br>
               Come discover what you...
@@ -122,7 +138,8 @@
               $95/person
             </span>
             <br>
-            <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;" data-id="1">&hearts;</a>
+            <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;"
+              data-id="1">&hearts;</a>
           </div>
         </div>
       </div>
@@ -140,7 +157,8 @@
                 </strong>
               </h5>
             </span>
-            <span class="card-text" id="card-location" style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
+            <span class="card-text" id="card-location"
+              style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
               Black Burger Buns?! Order Up!
               <br>
               These tastey burgers...
@@ -159,16 +177,92 @@
               $18/person
             </span>
             <br>
-            <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;" data-id="1">&hearts;</a>
+            <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;"
+              data-id="1">&hearts;</a>
           </div>
         </div>
       </div>
     </div>
+</div>  <div class="row"></div>
+</div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/apicalls.js"></script>
+{{!-- $("#submit-button").click(function(){
+  $.ajax({url: "`/api/discountcall/${location}`", success: function(result){
+    $("#div1").html(result);
+  }}); --}}
+<script>
+  $(document).ready(function () {
+    $("#submit-button").click(function () {
+      var location = $("#userLocation").val()
+      $.get(`https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?token=JWFTSNNP5W6H4IMYUNR2&location.address=${location}`, function (data) {
+
+        console.log(data);
+
+        var i, text, card;
+
+
+
+
+        $(".container").empty()
+
+        for (i = 0; i < 10; i++) {
+          text += data.events[i].name.text + "<br>";
+
+
+          card += `
+        <div class="card-div" class="col s3" style="margin:30px;width:350px;">
+        <div class="card" style="width: 330px;" data-id={{this.id}}>
+          <div class="card-image" style="margin:0 auto; width:328px; height:210px;">
+            <img src="${ data.events[i].logo.url}" style="margin:0 auto; width:328px; height:210px;"
+              alt="{{this.imageNmae}}">
+          </div>
+          <div class="card-body">
+            <span>
+              <h5 class="card-title" id="card-title">
+                <strong>
+                  ${ data.events[i].name.text}
+                </strong>
+              </h5>
+            </span>
+             <span class="card-text" id="card-location"
+             style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;">
+             <br>
+             <a href="#" target="blank">
+               Read More
+             </a>
+           </span>
+           <br>
+           <br>
+           <span class="card-text" id="card-address"
+             style="color:#9e9e9e;font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;">
+           <br> 
+           </span>
+           <span class="card-text" id="card-price"
+             style="text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;">
+             $$$$
+           </span>
+           <br>
+           <a href="#" class="btn btn-primary" style="font-size:15px;background-color:#ff7f4f;"
+             data-id="1">&hearts;</a>
+         </div>
+       </div>
+     </div>
+       `
+
+          $("#cards-container").append(card);
+
+        }
+
+      });
+    });
+  });
+
+</script>
   </div>
 
-  <div class="row"></div>
-</div>
 {{!-- <div class="row">
       <div class="col-12">
         <div width="50vh" class="return-cards">
@@ -190,18 +284,6 @@
 </div> --}}
 {{!-- </div>
 </div> --}}
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
-<script src="/js/apicalls.js"></script>
-
-<script>
-  $("#submit-button").click(function(){
-  $.ajax({url: "`/api/discountcall/${location}`", success: function(result){
-    $("#div1").html(result);
-  }});
-});
-</script>
 
 {{!-- 
 <div class="row">
