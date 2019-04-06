@@ -6,7 +6,6 @@ var request = require("request");
 
 
 module.exports = function (app) {
-
   // Get all users
   app.get("/api/users", function (req, res) {
     db.Users.findAll({}).then(allUsers => res.json(allUsers));
@@ -139,3 +138,5 @@ module.exports = function (app) {
     );
   });
 };
+
+

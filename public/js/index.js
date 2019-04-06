@@ -97,3 +97,19 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+
+// var cardDiv = $("<div class='card-div' class='col s3'style='margin:30px;width:350px;'></div>");
+// var card = $("<div class='card' style='width: 330px;'data-id={{this.id}}></div>");
+// var cardImg = $("<div class='card-image' style='margin:0 auto; width:328px; height:210px;'></div>");
+// var cardBodyDiv = $(" <div class='card-body'>");
+// var cardTitleSpan = $("<span><h5 class='card-title' id='card-title' style='font-size:25px;font-family: 'Signika', sans-serif;'><strong></strong></h5></span>");
+// var cardTextSpan = $("<span class='card-text'id='card-location' style='font-size:16px;font-family: 'Signika', sans-serif;'><a href='#' target='blank'></a></span><br><br>");
+// var cardAddresSpan = $("<span class='card-text' id='card-address' style='font-size:16px;font-family: 'Signika', sans-serif;margin:20px 0px;'></span>");
+// var cardPrice = $("<span class='card-text' id='card-price' style='text-align:right;font-size:20px;font-family: 'Satisfy', cursive;margin:20px;'></span>");
+// var likeButton = $("<a href='#' class='btn btn-primary'style='font-size:15px;' data-id='1'>&hearts;</a>");
+
+$.ajax("../routes/apiRoutes").done(function (body) {
+  console.log(body);
+});

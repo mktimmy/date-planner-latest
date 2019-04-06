@@ -12,18 +12,22 @@ module.exports = function(app) {
   });
 
   app.get("/browse/categories/:categoriename", function (req, res) {
-    var categoriename = req.params.categoriename
+    var categoriename = req.params.categoriename;
+  });
 
-  })
+  app.get("/users/", function (req, res) {
+    db.Users.findAll().then(function(allUsers) {
+      // res.json(allUsers);
+      res.render("users");
+    });
+  });
 
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.render("example", {
-        example: dbExample
-      });
+  app.get("/users/:id", function(req, res) {
+    var userID = req.params.id;
+    db.Users.findOne({where: {id: userID }}).then(function(Users) {
+      // res.json(Users);
+      res.render("users");
     });
   });
 

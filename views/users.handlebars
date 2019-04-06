@@ -1,0 +1,116 @@
+<div id="user" style="width:100%;">
+
+  <div class="row">
+    <div class="col s12"></div>
+    <div class="container-fluid" id="user-container">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <div class="card mt-4">
+          <div class="card-body" style="text-align:left;">
+            <div class="card-title">
+              <h5>User Profile</h5>
+            </div>
+            
+            {{!-- <div class="username col-12" style="text-align:left;" style="margin:20px;">
+              <li data="{{Users.username}}" class="list-group-item">
+                Username:<br>
+                <button class="btn-large " style="width:90%" placeholder="mbomf">
+                  <a href="#"></a>
+                </button>
+              </li>
+            </div> --}}
+            <div class="username col-12" style="margin:20px;text-align:left;">
+             <li data="{{Users.gender}}" class="list-group-item">
+                Username:<br>
+                <input class="btn-large " style="width:90%" placeholder="mbomf">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+            <div class="name col-12" style="margin:20px;text-align:left;">
+             <li data="{{Users.gender}}" class="list-group-item">
+                Name:<br>
+                <input class="btn-large disabled" style="width:90%" placeholder="Marco Brugo">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+            <div class="gender col-12" style="margin:20px;">
+              <li data="{{Users.gender}}" class="list-group-item">
+                Gender:<br>
+                <input class="btn-large disabled" style="width:90%" placeholder="Male">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+            <div class="age col-12" style="margin:20px;">
+              <li data="{{Users.gender}}" class="list-group-item">
+                Age:<br>
+                <input class="btn-large disabled" style="width:90%" placeholder="22">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+            <div class="location-profile col-12" style="margin:20px;">
+              <li data="{{Users.gender}}" class="list-group-item">
+                Location:<br>
+                <input class="btn-large" style="width:90%" placeholder="Miami">
+                <a href="#">{{gender}}</a>
+                </input>
+              </li>
+            </div>
+           <div class="gender col-12" style="margin:20px;">
+              <li data="{{Users.gender}}" class="list-group-item">
+                Password:<br>
+                <input class="btn-large" style="width:90%;placeholder: white;" placeholder="*********">
+                <a href="#">{{password}}</a>
+                </input>
+              </li>
+            </div>
+            {{!-- <li data="{{Users.username}}" class="list-group-item">
+              Username:<br>
+              <a href="#">{{Users.username}}</a>
+              <button class="btn btn-danger float-right delete">ｘ</button>
+
+              <p>
+                {{#each Users}}
+
+            </li> --}}
+            {{!-- <p>
+              <p>
+                <strong>Name: <br>
+                  {{name}}</p>
+              </strong>
+              <p>
+                <strong>PassWord: <br>
+                  {{password}}</p>
+              </strong>
+              <p>
+                <strong>PassWord: <br>
+                  {{password}}
+              </strong>
+              </p>
+              <strong>Location:</strong> <br> {{this.Users.location}}
+            </p> --}}
+
+          <div class="back-to-home"> <button class="waves-effect waves-light btn #ff6f00 amber darken-4;"
+              style="margin:20px;float:right;"> <a style="color:white;" href="http://localhost:3000/">Save Changes</a></button></div>
+
+          </div>
+          <div class="back-to-home"> <button class="waves-effect waves-light btn #ff6f00 amber darken-4;"
+              style="margin:20px;"> <a style="color:white;" href="/">← Back To Home</a></button></div>
+        </div>
+
+        {{!-- {{#each examples}}
+        <li data-id="{{this.id}}" class="list-group-item">
+          <a href="example/{{this.id}}">{{this.text}}</a>
+          <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}} --}}
+      </div>
+    </div>
+  </div>
