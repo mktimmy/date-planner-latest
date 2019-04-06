@@ -196,6 +196,7 @@
 <script>
   $(document).ready(function () {
     $("#submit-button").click(function () {
+      event.preventDefault();
       var location = $("#user-location").val()
       $.get(`https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?token=JWFTSNNP5W6H4IMYUNR2&location.address=${location}`, function (data) {
 

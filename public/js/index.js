@@ -111,5 +111,5 @@ $exampleList.on("click", ".delete", handleDeleteBtnClick);
 // var likeButton = $("<a href='#' class='btn btn-primary'style='font-size:15px;' data-id='1'>&hearts;</a>");
 
 $.ajax("../routes/apiRoutes").done(function (body) {
-  console.log(body);
+  // console.log(body);
 });
